@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
 import globaleat from "../assets/projects/globaleat.png";
+import cardio from "../assets/projects/cardio.png";
 
 const Projects = () => {
   return (
@@ -26,16 +27,16 @@ const Projects = () => {
               demoLink="https://globaleat.netlify.app/"
             />
           </Col>
-
-          {/* <Col md={4} className="project-card">
+          <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={kickstart}
+              imgPath={cardio}
               isBlog={false}
-              title="Solidity Kickstart"
-              description="Solidity Kickstart is a Web 3 project that utilizes an Ethereum smart contract created using Solidity. It includes all the functionality of a kickstart platform, enabling users to interact with their Metamask wallet, transfer Ethereum and participate in kickstart campaigns."
-              ghLink="https://github.com/19sajib/Solidity-Kickstart"
+              title="Cardiovascular Risk Prediction"
+              description="A Jupyter notebook that demonstrates building and evaluating models to predict cardiovascular risk using the provided dataset."
+              ghLink="https://github.com/MK-0406/Cardiovascular_Risk_Prediction.git"
+              demoLink="https://colab.research.google.com/drive/17ujh34a_xm8BrzaAny3eBhkUSq3HzzUo?usp=sharing"
             />
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </Container>
