@@ -4,6 +4,7 @@ import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
 import globaleat from "../assets/projects/globaleat.png";
 import cardio from "../assets/projects/cardio.png";
+import remaindertheorem from "../assets/projects/remainder-theorem.png";
 
 const Projects = () => {
   return (
@@ -35,6 +36,16 @@ const Projects = () => {
               description="A Jupyter notebook that demonstrates building and evaluating models to predict cardiovascular risk using the provided dataset."
               ghLink="https://github.com/MK-0406/Cardiovascular_Risk_Prediction.git"
               demoLink="https://colab.research.google.com/drive/17ujh34a_xm8BrzaAny3eBhkUSq3HzzUo?usp=sharing"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={remaindertheorem}
+              isBlog={false}
+              title="Chinese Remainder Theorem"
+              description="A minimal command-line program that reads three remainders and three moduli from standard input and computes a solution to the corresponding system of congruences (modulo the product of the moduli)."
+              ghLink="https://github.com/MK-0406/Chinese_Remainder_Theorem.git"
+              demoLink="https://onlinegdb.com/zcHwXMmH1"
             />
           </Col>
         </Row>
