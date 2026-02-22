@@ -4,7 +4,8 @@ import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
 import globaleat from "../assets/projects/globaleat.png";
 import cardio from "../assets/projects/cardio.png";
-import remaindertheorem from "../assets/projects/remainder-theorem.png";
+import remainderTheorem from "../assets/projects/remainder-theorem.png";
+import warehouseSimulation from "../assets/projects/warehouse-simulation.png";
 
 const Projects = () => {
   return (
@@ -40,12 +41,22 @@ const Projects = () => {
           </Col>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={remaindertheorem}
+              imgPath={remainderTheorem}
               isBlog={false}
               title="Chinese Remainder Theorem"
               description="A minimal command-line program that reads three remainders and three moduli from standard input and computes a solution to the corresponding system of congruences (modulo the product of the moduli)."
               ghLink="https://github.com/MK-0406/Chinese_Remainder_Theorem.git"
               demoLink="https://onlinegdb.com/zcHwXMmH1"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={warehouseSimulation}
+              isBlog={false}
+              title="Warehouse Simulation"
+              description="A small, single-file concurrency simulation that models a warehouse receiving trailers, performing security checks, unloading containers into loading bays, and moving those containers into storage with forklifts."
+              ghLink="https://github.com/MK-0406/Warehouse_Simulation.git"
+              demoLink="https://onlinegdb.com/cdLHVt7QB"
             />
           </Col>
         </Row>
