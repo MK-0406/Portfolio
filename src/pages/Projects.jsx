@@ -6,6 +6,7 @@ import globaleat from "../assets/projects/globaleat.png";
 import cardio from "../assets/projects/cardio.png";
 import remainderTheorem from "../assets/projects/remainder-theorem.png";
 import warehouseSimulation from "../assets/projects/warehouse-simulation.png";
+import mnist from "../assets/projects/mnist.png";
 
 const Projects = () => {
   return (
@@ -57,6 +58,16 @@ const Projects = () => {
               description="A small, single-file concurrency simulation that models a warehouse receiving trailers, performing security checks, unloading containers into loading bays, and moving those containers into storage with forklifts."
               ghLink="https://github.com/MK-0406/Warehouse_Simulation.git"
               demoLink="https://onlinegdb.com/cdLHVt7QB"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={mnist}
+              isBlog={false}
+              title="MNIST Digit Classification"
+              description="A Jupyter Notebook for classifying MNIST handwritten digits and evaluating model performance with common machine learning metrics and visualizations."
+              ghLink="https://github.com/MK-0406/MNIST-Digit-Classification.git"
+              demoLink="https://colab.research.google.com/drive/1_5QiXmAeciktFxoG9xPDDZg8cntztEfl?usp=sharing"
             />
           </Col>
         </Row>
