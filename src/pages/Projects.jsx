@@ -8,6 +8,7 @@ import remainderTheorem from "../assets/projects/remainder-theorem.png";
 import warehouseSimulation from "../assets/projects/warehouse-simulation.png";
 import mnist from "../assets/projects/mnist.png";
 import hospitalManagement from "../assets/projects/hospital-management-java.png";
+import restaurantManagementDb from "../assets/projects/restaurant-management-db.png";
 
 const Projects = () => {
   return (
@@ -78,6 +79,15 @@ const Projects = () => {
               title="Hospital Management System"
               description="Simple Java demo of hospital roles and entities."
               ghLink="https://github.com/MK-0406/Hospital_Management_System.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={restaurantManagementDb}
+              isBlog={false}
+              title="Restaurant Management System"
+              description="A relational database schema and sample data for a restaurant management system, implemented for Oracle Database using SQL and PL/SQL. It models customers, staff, branches, menu items, orders, payments, and operational workflows, and provides stored procedures/functions for common actions."
+              ghLink="https://github.com/MK-0406/Restaurant_Management_System.git"
             />
           </Col>
         </Row>
