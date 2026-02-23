@@ -7,6 +7,7 @@ import cardio from "../assets/projects/cardio.png";
 import remainderTheorem from "../assets/projects/remainder-theorem.png";
 import warehouseSimulation from "../assets/projects/warehouse-simulation.png";
 import mnist from "../assets/projects/mnist.png";
+import hospitalManagement from "../assets/projects/hospital-management-java.png";
 
 const Projects = () => {
   return (
@@ -68,6 +69,15 @@ const Projects = () => {
               description="A Jupyter Notebook for classifying MNIST handwritten digits and evaluating model performance with common machine learning metrics and visualizations."
               ghLink="https://github.com/MK-0406/MNIST-Digit-Classification.git"
               demoLink="https://colab.research.google.com/drive/1_5QiXmAeciktFxoG9xPDDZg8cntztEfl?usp=sharing"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={hospitalManagement}
+              isBlog={false}
+              title="Hospital Management System"
+              description="Simple Java demo of hospital roles and entities."
+              ghLink="https://github.com/MK-0406/Hospital_Management_System.git"
             />
           </Col>
         </Row>
