@@ -95,7 +95,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                //to="/contact"
+                to="/contact"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact Me
