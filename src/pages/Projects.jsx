@@ -9,6 +9,7 @@ import warehouseSimulation from "../assets/projects/warehouse-simulation.png";
 import mnist from "../assets/projects/mnist.png";
 import hospitalManagement from "../assets/projects/hospital-management-java.png";
 import restaurantManagementDb from "../assets/projects/restaurant-management-db.png";
+import cpuMonitoring from "../assets/projects/cpu-monitoring.png";
 
 const Projects = () => {
   return (
@@ -88,6 +89,15 @@ const Projects = () => {
               title="Restaurant Management System"
               description="A relational database schema and sample data for a restaurant management system, implemented for Oracle Database using SQL and PL/SQL. It models customers, staff, branches, menu items, orders, payments, and operational workflows, and provides stored procedures/functions for common actions."
               ghLink="https://github.com/MK-0406/Restaurant_Management_System.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={cpuMonitoring}
+              isBlog={false}
+              title="CPU Resource Monitoring Program"
+              description="A simple Bash-based utility that logs the highest CPU-consuming process on your system at a fixed interval. Each sample records the current time, the process name, and its %CPU into a CSV file."
+              ghLink="https://github.com/MK-0406/CPU_Resource_Monitoring_Program.git"
             />
           </Col>
         </Row>
