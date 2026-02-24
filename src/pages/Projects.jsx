@@ -10,6 +10,7 @@ import mnist from "../assets/projects/mnist.png";
 import hospitalManagement from "../assets/projects/hospital-management-java.png";
 import restaurantManagementDb from "../assets/projects/restaurant-management-db.png";
 import cpuMonitoring from "../assets/projects/cpu-monitoring.png";
+import simpleOperations from "../assets/projects/simple-operations.png";
 
 const Projects = () => {
   return (
@@ -98,6 +99,15 @@ const Projects = () => {
               title="CPU Resource Monitoring Program"
               description="A simple Bash-based utility that logs the highest CPU-consuming process on your system at a fixed interval. Each sample records the current time, the process name, and its %CPU into a CSV file."
               ghLink="https://github.com/MK-0406/CPU_Resource_Monitoring_Program.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={simpleOperations}
+              isBlog={false}
+              title="Simple Operations using Assembly"
+              description="MIPS assembly project for the ICOA assignment. This repository contains MIPS source you can run with MIPS simulators such as QtSpim."
+              ghLink="https://github.com/MK-0406/Simple_Operations_using_Assembly.git"
             />
           </Col>
         </Row>
