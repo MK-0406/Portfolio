@@ -11,6 +11,7 @@ import hospitalManagement from "../assets/projects/hospital-management-java.png"
 import restaurantManagementDb from "../assets/projects/restaurant-management-db.png";
 import cpuMonitoring from "../assets/projects/cpu-monitoring.png";
 import simpleOperations from "../assets/projects/simple-operations.png";
+import studentCourseManagement from "../assets/projects/student-course-management.png";
 
 const Projects = () => {
   return (
@@ -108,6 +109,16 @@ const Projects = () => {
               title="Simple Operations using Assembly"
               description="MIPS assembly project for the ICOA assignment. This repository contains MIPS source you can run with MIPS simulators such as QtSpim."
               ghLink="https://github.com/MK-0406/Simple_Operations_using_Assembly.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={studentCourseManagement}
+              isBlog={false}
+              title="Student & Course Management System"
+              description="A small command-line application to manage students, courses, assessments, and grades using simple text files as storage."
+              ghLink="https://github.com/MK-0406/Student_and_Course_Management_System_py.git"
+              demoLink="https://onlinegdb.com/4DaH0fiuc"
             />
           </Col>
         </Row>
