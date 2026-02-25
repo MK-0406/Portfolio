@@ -13,6 +13,7 @@ import cpuMonitoring from "../assets/projects/cpu-monitoring.png";
 import simpleOperations from "../assets/projects/simple-operations.png";
 import studentCourseManagement from "../assets/projects/student-course-management.png";
 import studentLinkedList from "../assets/projects/student-linked-list.png";
+import studentBinaryTree from "../assets/projects/student-binary-tree.png";
 
 const Projects = () => {
   return (
@@ -130,6 +131,16 @@ const Projects = () => {
               description="Simple console application implementing a student records management system using singly linked lists in C++."
               ghLink="https://github.com/MK-0406/Student_Records_Management_System_using_Linked_List_cpp.git"
               demoLink="https://onlinegdb.com/I5ikk5W5y"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={studentBinaryTree}
+              isBlog={false}
+              title="Student Management System using Binary Tree"
+              description="Simple student records manager implemented using a binary search tree in C++."
+              ghLink="https://github.com/MK-0406/Student_Records_Management_System_using_Binary_Tree_cpp.git"
+              demoLink="https://onlinegdb.com/jT5xGXMLR-"
             />
           </Col>
         </Row>
