@@ -12,6 +12,7 @@ import restaurantManagementDb from "../assets/projects/restaurant-management-db.
 import cpuMonitoring from "../assets/projects/cpu-monitoring.png";
 import simpleOperations from "../assets/projects/simple-operations.png";
 import studentCourseManagement from "../assets/projects/student-course-management.png";
+import studentLinkedList from "../assets/projects/student-linked-list.png";
 
 const Projects = () => {
   return (
@@ -119,6 +120,16 @@ const Projects = () => {
               description="A small command-line application to manage students, courses, assessments, and grades using simple text files as storage."
               ghLink="https://github.com/MK-0406/Student_and_Course_Management_System_py.git"
               demoLink="https://onlinegdb.com/4DaH0fiuc"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={studentLinkedList}
+              isBlog={false}
+              title="Student Management System using Linked List"
+              description="Simple console application implementing a student records management system using singly linked lists in C++."
+              ghLink="https://github.com/MK-0406/Student_Records_Management_System_using_Linked_List_cpp.git"
+              demoLink="https://onlinegdb.com/I5ikk5W5y"
             />
           </Col>
         </Row>
