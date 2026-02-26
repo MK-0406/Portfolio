@@ -16,6 +16,7 @@ import studentLinkedList from "../assets/projects/student-linked-list.png";
 import studentBinaryTree from "../assets/projects/student-binary-tree.png";
 import restaurantOrdering from "../assets/projects/restaurant-ordering.png";
 import memorisingApp from "../assets/projects/memorising-app.png";
+import navigation from "../assets/projects/navigation.png";
 
 const Projects = () => {
   return (
@@ -163,6 +164,15 @@ const Projects = () => {
               description="A website which helps me to memorise during my uni life."
               ghLink="https://github.com/MK-0406/Memorising-App.git"
               demoLink="https://mk-0406.github.io/Memorising-App/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={navigation}
+              isBlog={false}
+              title="Navigation System using Coloured QR Code"
+              description="A cross-platform C++ application using OpenCV and ZBar to detect QR codes, map coordinates, and guide users to destinations in real time."
+              ghLink="https://github.com/MK-0406/Navigation_System_Using_Coloured_QRCode.git"
             />
           </Col>
         </Row>
