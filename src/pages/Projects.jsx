@@ -14,6 +14,7 @@ import simpleOperations from "../assets/projects/simple-operations.png";
 import studentCourseManagement from "../assets/projects/student-course-management.png";
 import studentLinkedList from "../assets/projects/student-linked-list.png";
 import studentBinaryTree from "../assets/projects/student-binary-tree.png";
+import restaurantOrdering from "../assets/projects/restaurant-ordering.png";
 
 const Projects = () => {
   return (
@@ -141,6 +142,16 @@ const Projects = () => {
               description="Simple student records manager implemented using a binary search tree in C++."
               ghLink="https://github.com/MK-0406/Student_Records_Management_System_using_Binary_Tree_cpp.git"
               demoLink="https://onlinegdb.com/jT5xGXMLR-"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={restaurantOrdering}
+              isBlog={false}
+              title="Restaurant Ordering System"
+              description="Simple console-based restaurant ordering system (C++). The program reads menu data from text files and provides a basic interactive ordering flow."
+              ghLink="https://github.com/MK-0406/Restaurant_Ordering_System_cpp.git"
+              demoLink="https://onlinegdb.com/SGhyc1F0r"
             />
           </Col>
         </Row>
