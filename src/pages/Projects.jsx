@@ -15,6 +15,7 @@ import studentCourseManagement from "../assets/projects/student-course-managemen
 import studentLinkedList from "../assets/projects/student-linked-list.png";
 import studentBinaryTree from "../assets/projects/student-binary-tree.png";
 import restaurantOrdering from "../assets/projects/restaurant-ordering.png";
+import memorisingApp from "../assets/projects/memorising-app.png";
 
 const Projects = () => {
   return (
@@ -152,6 +153,16 @@ const Projects = () => {
               description="Simple console-based restaurant ordering system (C++). The program reads menu data from text files and provides a basic interactive ordering flow."
               ghLink="https://github.com/MK-0406/Restaurant_Ordering_System_cpp.git"
               demoLink="https://onlinegdb.com/SGhyc1F0r"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={memorisingApp}
+              isBlog={false}
+              title="Memorising App"
+              description="A website which helps me to memorise during my uni life."
+              ghLink="https://github.com/MK-0406/Memorising-App.git"
+              demoLink="https://mk-0406.github.io/Memorising-App/"
             />
           </Col>
         </Row>
