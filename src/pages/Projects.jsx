@@ -17,6 +17,7 @@ import studentBinaryTree from "../assets/projects/student-binary-tree.png";
 import restaurantOrdering from "../assets/projects/restaurant-ordering.png";
 import memorisingApp from "../assets/projects/memorising-app.png";
 import navigation from "../assets/projects/navigation.png";
+import luminote from "../assets/projects/luminote.png";
 
 const Projects = () => {
   return (
@@ -173,6 +174,16 @@ const Projects = () => {
               title="Navigation System using Coloured QR Code"
               description="A cross-platform C++ application using OpenCV and ZBar to detect QR codes, map coordinates, and guide users to destinations in real time."
               ghLink="https://github.com/MK-0406/Navigation_System_Using_Coloured_QRCode.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={luminote}
+              isBlog={false}
+              title="LumiNote - A Note-Taking App"
+              description="A powerful, feature-rich digital note-taking application inspired by GoodNotes. Built with vanilla JavaScript, HTML, and CSS - no frameworks required."
+              ghLink="https://github.com/MK-0406/Notes.git"
+              demoLink="https://mk-0406.github.io/Notes/"
             />
           </Col>
         </Row>
