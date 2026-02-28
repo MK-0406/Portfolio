@@ -19,6 +19,7 @@ import memorisingApp from "../assets/projects/memorising-app.png";
 import navigation from "../assets/projects/navigation.png";
 import luminote from "../assets/projects/luminote.png";
 import snapaiMac from "../assets/projects/snapai-mac.png";
+import snapaiWindows from "../assets/projects/snapai-windows.png";
 
 const Projects = () => {
   return (
@@ -194,6 +195,15 @@ const Projects = () => {
               title="SnapAI for Mac"
               description="SnapAI is a lightweight floating panel app for macOS that monitors your screenshots, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers."
               ghLink="https://github.com/MK-0406/SnapAI_Mac.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={snapaiWindows}
+              isBlog={false}
+              title="SnapAI for Windows"
+              description="SnapAI is a lightweight floating panel app for Windows that monitors your screenshot folder, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers.."
+              ghLink="https://github.com/MK-0406/SnapAI_Windows.git"
             />
           </Col>
         </Row>
