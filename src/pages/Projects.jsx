@@ -18,6 +18,7 @@ import restaurantOrdering from "../assets/projects/restaurant-ordering.png";
 import memorisingApp from "../assets/projects/memorising-app.png";
 import navigation from "../assets/projects/navigation.png";
 import luminote from "../assets/projects/luminote.png";
+import snapaiMac from "../assets/projects/snapai-mac.png";
 
 const Projects = () => {
   return (
@@ -184,6 +185,15 @@ const Projects = () => {
               description="A powerful, feature-rich digital note-taking application inspired by GoodNotes. Built with vanilla JavaScript, HTML, and CSS - no frameworks required."
               ghLink="https://github.com/MK-0406/Notes.git"
               demoLink="https://mk-0406.github.io/Notes/"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={snapaiMac}
+              isBlog={false}
+              title="SnapAI for Mac"
+              description="SnapAI is a lightweight floating panel app for macOS that monitors your screenshots, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers."
+              ghLink="https://github.com/MK-0406/SnapAI_Mac.git"
             />
           </Col>
         </Row>
