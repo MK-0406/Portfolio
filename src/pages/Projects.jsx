@@ -20,6 +20,7 @@ import navigation from "../assets/projects/navigation.png";
 import luminote from "../assets/projects/luminote.png";
 import snapaiMac from "../assets/projects/snapai-mac.png";
 import snapaiWindows from "../assets/projects/snapai-windows.png";
+import mealLogging from "../assets/projects/meal-logging.png";
 
 const Projects = () => {
   return (
@@ -204,6 +205,15 @@ const Projects = () => {
               title="SnapAI for Windows"
               description="SnapAI is a lightweight floating panel app for Windows that monitors your screenshot folder, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers.."
               ghLink="https://github.com/MK-0406/SnapAI_Windows.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={mealLogging}
+              isBlog={false}
+              title="Meal Logging and Nutrient Tracking Application (FoodWise)"
+              description="FoodWise is a modern, AI-powered meal logging and nutritional tracking application designed to help users achieve their health goals through personalized insights and community support."
+              ghLink="https://github.com/MK-0406/meal_logging.git"
             />
           </Col>
         </Row>
