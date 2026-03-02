@@ -22,6 +22,7 @@ import snapaiMac from "../assets/projects/snapai-mac.png";
 import snapaiWindows from "../assets/projects/snapai-windows.png";
 import mealLogging from "../assets/projects/meal-logging.png";
 import portfolio from "../assets/projects/portfolio.png";
+import mealRecommendationAPI from "../assets/projects/meal-recommendation-api.png";
 
 const Projects = () => {
   return (
@@ -225,6 +226,15 @@ const Projects = () => {
               description="A React-based personal portfolio website showcasing profile information, skills, projects, resume, and contact form."
               ghLink="https://github.com/MK-0406/Portfolio.git"
               demoLink="https://portfolio-mkwong.vercel.app"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={mealRecommendationAPI}
+              isBlog={false}
+              title="Meal Recommendation Model API"
+              description="Simple FastAPI service for meal recommendation inference using a pre-trained scikit-learn model."
+              ghLink="https://github.com/MK-0406/meal_recommender_model.git"
             />
           </Col>
         </Row>
