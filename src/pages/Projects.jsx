@@ -21,6 +21,7 @@ import luminote from "../assets/projects/luminote.png";
 import snapaiMac from "../assets/projects/snapai-mac.png";
 import snapaiWindows from "../assets/projects/snapai-windows.png";
 import mealLogging from "../assets/projects/meal-logging.png";
+import portfolio from "../assets/projects/portfolio.png";
 
 const Projects = () => {
   return (
@@ -214,6 +215,16 @@ const Projects = () => {
               title="Meal Logging and Nutrient Tracking Application (FoodWise)"
               description="FoodWise is a modern, AI-powered meal logging and nutritional tracking application designed to help users achieve their health goals through personalized insights and community support."
               ghLink="https://github.com/MK-0406/meal_logging.git"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={portfolio}
+              isBlog={false}
+              title="My Portfolio Website"
+              description="A React-based personal portfolio website showcasing profile information, skills, projects, resume, and contact form."
+              ghLink="https://github.com/MK-0406/Portfolio.git"
+              demoLink="https://portfolio-mkwong.vercel.app"
             />
           </Col>
         </Row>
