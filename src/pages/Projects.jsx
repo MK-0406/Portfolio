@@ -24,6 +24,213 @@ import mealLogging from "../assets/projects/meal-logging.png";
 import portfolio from "../assets/projects/portfolio.png";
 import mealRecommendationAPI from "../assets/projects/meal-recommendation-api.png";
 
+const projects = [
+  {
+    imgPath: mealLogging,
+    isBlog: false,
+    title: "Meal Logging and Nutrient Tracking Application (FoodWise)",
+    description:
+      "FoodWise is a modern, AI-powered meal logging and nutritional tracking application designed to help users achieve their health goals through personalized insights and community support.",
+    skills: "Full-Stack Development, AI Features, Product Design",
+    ghLink: "https://github.com/MK-0406/meal_logging.git",
+  },
+  {
+    imgPath: mealRecommendationAPI,
+    isBlog: false,
+    title: "Meal Recommendation Model API",
+    description:
+      "Simple FastAPI service for meal recommendation inference using a pre-trained scikit-learn model.",
+    skills: "Python, FastAPI, Machine Learning, API Development",
+    ghLink: "https://github.com/MK-0406/meal_recommender_model.git",
+  },
+  {
+    imgPath: snapaiMac,
+    isBlog: false,
+    title: "SnapAI for Mac",
+    description:
+      "SnapAI is a lightweight floating panel app for macOS that monitors your screenshots, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers.",
+    skills: "macOS App Development, OCR, API Integration",
+    ghLink: "https://github.com/MK-0406/SnapAI_Mac.git",
+  },
+  {
+    imgPath: snapaiWindows,
+    isBlog: false,
+    title: "SnapAI for Windows",
+    description:
+      "SnapAI is a lightweight floating panel app for Windows that monitors your screenshot folder, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers.",
+    skills: "Windows App Development, OCR, API Integration",
+    ghLink: "https://github.com/MK-0406/SnapAI_Windows.git",
+  },
+  {
+    imgPath: mnist,
+    isBlog: false,
+    title: "MNIST Digit Classification",
+    description:
+      "A Jupyter Notebook for classifying MNIST handwritten digits and evaluating model performance with common machine learning metrics and visualizations.",
+    skills: "Python, Machine Learning, Data Visualization",
+    ghLink: "https://github.com/MK-0406/MNIST-Digit-Classification.git",
+    demoLink:
+      "https://colab.research.google.com/drive/1_5QiXmAeciktFxoG9xPDDZg8cntztEfl?usp=sharing",
+  },
+  {
+    imgPath: cardio,
+    isBlog: false,
+    title: "Cardiovascular Risk Prediction",
+    description:
+      "A Jupyter notebook that demonstrates building and evaluating models to predict cardiovascular risk using the provided dataset.",
+    skills: "Python, Data Science, Predictive Modeling",
+    ghLink: "https://github.com/MK-0406/Cardiovascular_Risk_Prediction.git",
+    demoLink:
+      "https://colab.research.google.com/drive/17ujh34a_xm8BrzaAny3eBhkUSq3HzzUo?usp=sharing",
+  },
+  {
+    imgPath: portfolio,
+    isBlog: false,
+    title: "My Portfolio Website",
+    description:
+      "A React-based personal portfolio website showcasing profile information, skills, projects, resume, and contact form.",
+    skills: "React, Frontend Development, UI Design",
+    ghLink: "https://github.com/MK-0406/Portfolio.git",
+    demoLink: "https://portfolio-mkwong.vercel.app",
+  },
+  {
+    imgPath: luminote,
+    isBlog: false,
+    title: "LumiNote - A Note-Taking App",
+    description:
+      "A powerful, feature-rich digital note-taking application inspired by GoodNotes. Built with vanilla JavaScript, HTML, and CSS - no frameworks required.",
+    skills: "JavaScript, HTML, CSS, Product UI",
+    ghLink: "https://github.com/MK-0406/Notes.git",
+    demoLink: "https://mk-0406.github.io/Notes/",
+  },
+  {
+    imgPath: globaleat,
+    isBlog: false,
+    title: "Food Website (GlobalEat)",
+    description:
+      "A small static multi-page website project containing content pages for cuisine, country information, a blog, contact page, and shared header/footer components. Built with plain HTML, CSS and a little JavaScript.",
+    skills: "HTML, CSS, JavaScript, Multi-Page Website",
+    ghLink: "https://github.com/MK-0406/Food_Website_GlobalEat",
+    demoLink: "https://globaleat.netlify.app/",
+  },
+  {
+    imgPath: memorisingApp,
+    isBlog: false,
+    title: "Memorising App",
+    description: "A website which helps me to memorise during my uni life.",
+    skills: "Frontend Development, Learning Tool Design",
+    ghLink: "https://github.com/MK-0406/Memorising-App.git",
+    demoLink: "https://mk-0406.github.io/Memorising-App/",
+  },
+  {
+    imgPath: navigation,
+    isBlog: false,
+    title: "Navigation System using Coloured QR Code",
+    description:
+      "A cross-platform C++ application using OpenCV and ZBar to detect QR codes, map coordinates, and guide users to destinations in real time.",
+    skills: "C++, Computer Vision, OpenCV",
+    ghLink: "https://github.com/MK-0406/Navigation_System_Using_Coloured_QRCode.git",
+  },
+  {
+    imgPath: warehouseSimulation,
+    isBlog: false,
+    title: "Warehouse Simulation",
+    description:
+      "A small, single-file concurrency simulation that models a warehouse receiving trailers, performing security checks, unloading containers into loading bays, and moving those containers into storage with forklifts.",
+    skills: "C, Concurrency, Systems Simulation",
+    ghLink: "https://github.com/MK-0406/Warehouse_Simulation.git",
+    demoLink: "https://onlinegdb.com/cdLHVt7QB",
+  },
+  {
+    imgPath: cpuMonitoring,
+    isBlog: false,
+    title: "CPU Resource Monitoring Program",
+    description:
+      "A simple Bash-based utility that logs the highest CPU-consuming process on your system at a fixed interval. Each sample records the current time, the process name, and its %CPU into a CSV file.",
+    skills: "Bash Scripting, Linux Monitoring, Automation",
+    ghLink: "https://github.com/MK-0406/CPU_Resource_Monitoring_Program.git",
+  },
+  {
+    imgPath: restaurantManagementDb,
+    isBlog: false,
+    title: "Restaurant Management System",
+    description:
+      "A relational database schema and sample data for a restaurant management system, implemented for Oracle Database using SQL and PL/SQL. It models customers, staff, branches, menu items, orders, payments, and operational workflows, and provides stored procedures/functions for common actions.",
+    skills: "SQL, PL/SQL, Database Design",
+    ghLink: "https://github.com/MK-0406/Restaurant_Management_System.git",
+  },
+  {
+    imgPath: hospitalManagement,
+    isBlog: false,
+    title: "Hospital Management System",
+    description: "Simple Java demo of hospital roles and entities.",
+    skills: "Java, OOP Fundamentals",
+    ghLink: "https://github.com/MK-0406/Hospital_Management_System.git",
+  },
+  {
+    imgPath: studentCourseManagement,
+    isBlog: false,
+    title: "Student & Course Management System",
+    description:
+      "A small command-line application to manage students, courses, assessments, and grades using simple text files as storage.",
+    skills: "Python, File Handling, CLI Development",
+    ghLink:
+      "https://github.com/MK-0406/Student_and_Course_Management_System_py.git",
+    demoLink: "https://onlinegdb.com/4DaH0fiuc",
+  },
+  {
+    imgPath: restaurantOrdering,
+    isBlog: false,
+    title: "Restaurant Ordering System",
+    description:
+      "Simple console-based restaurant ordering system (C++). The program reads menu data from text files and provides a basic interactive ordering flow.",
+    skills: "C++, File I/O, CLI Design",
+    ghLink: "https://github.com/MK-0406/Restaurant_Ordering_System_cpp.git",
+    demoLink: "https://onlinegdb.com/SGhyc1F0r",
+  },
+  {
+    imgPath: studentLinkedList,
+    isBlog: false,
+    title: "Student Management System using Linked List",
+    description:
+      "Simple console application implementing a student records management system using singly linked lists in C++.",
+    skills: "C++, Data Structures (Linked List)",
+    ghLink:
+      "https://github.com/MK-0406/Student_Records_Management_System_using_Linked_List_cpp.git",
+    demoLink: "https://onlinegdb.com/I5ikk5W5y",
+  },
+  {
+    imgPath: studentBinaryTree,
+    isBlog: false,
+    title: "Student Management System using Binary Tree",
+    description:
+      "Simple student records manager implemented using a binary search tree in C++.",
+    skills: "C++, Data Structures (Binary Search Tree)",
+    ghLink:
+      "https://github.com/MK-0406/Student_Records_Management_System_using_Binary_Tree_cpp.git",
+    demoLink: "https://onlinegdb.com/jT5xGXMLR-",
+  },
+  {
+    imgPath: remainderTheorem,
+    isBlog: false,
+    title: "Chinese Remainder Theorem",
+    description:
+      "A minimal command-line program that reads three remainders and three moduli from standard input and computes a solution to the corresponding system of congruences (modulo the product of the moduli).",
+    skills: "C, Number Theory, Algorithm Implementation",
+    ghLink: "https://github.com/MK-0406/Chinese_Remainder_Theorem.git",
+    demoLink: "https://onlinegdb.com/zcHwXMmH1",
+  },
+  {
+    imgPath: simpleOperations,
+    isBlog: false,
+    title: "Simple Operations using Assembly",
+    description:
+      "MIPS assembly project for the ICOA assignment. This repository contains MIPS source you can run with MIPS simulators such as QtSpim.",
+    skills: "MIPS Assembly, Low-Level Programming",
+    ghLink: "https://github.com/MK-0406/Simple_Operations_using_Assembly.git",
+  },
+];
+
 const Projects = () => {
   return (
     <Container fluid className="project-section">
@@ -33,214 +240,18 @@ const Projects = () => {
           Recent Top <strong className="yellow">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Projects are ordered by skill impact, with advanced AI/full-stack work first.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={globaleat}
-              isBlog={false}
-              title="Food Website (GlobalEat)"
-              description="A small static multi-page website project containing content pages for cuisine, country information, a blog, contact page, and shared header/footer components. Built with plain HTML, CSS and a little JavaScript."
-              ghLink="https://github.com/MK-0406/Food_Website_GlobalEat"
-              demoLink="https://globaleat.netlify.app/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={cardio}
-              isBlog={false}
-              title="Cardiovascular Risk Prediction"
-              description="A Jupyter notebook that demonstrates building and evaluating models to predict cardiovascular risk using the provided dataset."
-              ghLink="https://github.com/MK-0406/Cardiovascular_Risk_Prediction.git"
-              demoLink="https://colab.research.google.com/drive/17ujh34a_xm8BrzaAny3eBhkUSq3HzzUo?usp=sharing"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={remainderTheorem}
-              isBlog={false}
-              title="Chinese Remainder Theorem"
-              description="A minimal command-line program that reads three remainders and three moduli from standard input and computes a solution to the corresponding system of congruences (modulo the product of the moduli)."
-              ghLink="https://github.com/MK-0406/Chinese_Remainder_Theorem.git"
-              demoLink="https://onlinegdb.com/zcHwXMmH1"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={warehouseSimulation}
-              isBlog={false}
-              title="Warehouse Simulation"
-              description="A small, single-file concurrency simulation that models a warehouse receiving trailers, performing security checks, unloading containers into loading bays, and moving those containers into storage with forklifts."
-              ghLink="https://github.com/MK-0406/Warehouse_Simulation.git"
-              demoLink="https://onlinegdb.com/cdLHVt7QB"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={mnist}
-              isBlog={false}
-              title="MNIST Digit Classification"
-              description="A Jupyter Notebook for classifying MNIST handwritten digits and evaluating model performance with common machine learning metrics and visualizations."
-              ghLink="https://github.com/MK-0406/MNIST-Digit-Classification.git"
-              demoLink="https://colab.research.google.com/drive/1_5QiXmAeciktFxoG9xPDDZg8cntztEfl?usp=sharing"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={hospitalManagement}
-              isBlog={false}
-              title="Hospital Management System"
-              description="Simple Java demo of hospital roles and entities."
-              ghLink="https://github.com/MK-0406/Hospital_Management_System.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={restaurantManagementDb}
-              isBlog={false}
-              title="Restaurant Management System"
-              description="A relational database schema and sample data for a restaurant management system, implemented for Oracle Database using SQL and PL/SQL. It models customers, staff, branches, menu items, orders, payments, and operational workflows, and provides stored procedures/functions for common actions."
-              ghLink="https://github.com/MK-0406/Restaurant_Management_System.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={cpuMonitoring}
-              isBlog={false}
-              title="CPU Resource Monitoring Program"
-              description="A simple Bash-based utility that logs the highest CPU-consuming process on your system at a fixed interval. Each sample records the current time, the process name, and its %CPU into a CSV file."
-              ghLink="https://github.com/MK-0406/CPU_Resource_Monitoring_Program.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={simpleOperations}
-              isBlog={false}
-              title="Simple Operations using Assembly"
-              description="MIPS assembly project for the ICOA assignment. This repository contains MIPS source you can run with MIPS simulators such as QtSpim."
-              ghLink="https://github.com/MK-0406/Simple_Operations_using_Assembly.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={studentCourseManagement}
-              isBlog={false}
-              title="Student & Course Management System"
-              description="A small command-line application to manage students, courses, assessments, and grades using simple text files as storage."
-              ghLink="https://github.com/MK-0406/Student_and_Course_Management_System_py.git"
-              demoLink="https://onlinegdb.com/4DaH0fiuc"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={studentLinkedList}
-              isBlog={false}
-              title="Student Management System using Linked List"
-              description="Simple console application implementing a student records management system using singly linked lists in C++."
-              ghLink="https://github.com/MK-0406/Student_Records_Management_System_using_Linked_List_cpp.git"
-              demoLink="https://onlinegdb.com/I5ikk5W5y"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={studentBinaryTree}
-              isBlog={false}
-              title="Student Management System using Binary Tree"
-              description="Simple student records manager implemented using a binary search tree in C++."
-              ghLink="https://github.com/MK-0406/Student_Records_Management_System_using_Binary_Tree_cpp.git"
-              demoLink="https://onlinegdb.com/jT5xGXMLR-"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={restaurantOrdering}
-              isBlog={false}
-              title="Restaurant Ordering System"
-              description="Simple console-based restaurant ordering system (C++). The program reads menu data from text files and provides a basic interactive ordering flow."
-              ghLink="https://github.com/MK-0406/Restaurant_Ordering_System_cpp.git"
-              demoLink="https://onlinegdb.com/SGhyc1F0r"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={memorisingApp}
-              isBlog={false}
-              title="Memorising App"
-              description="A website which helps me to memorise during my uni life."
-              ghLink="https://github.com/MK-0406/Memorising-App.git"
-              demoLink="https://mk-0406.github.io/Memorising-App/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={navigation}
-              isBlog={false}
-              title="Navigation System using Coloured QR Code"
-              description="A cross-platform C++ application using OpenCV and ZBar to detect QR codes, map coordinates, and guide users to destinations in real time."
-              ghLink="https://github.com/MK-0406/Navigation_System_Using_Coloured_QRCode.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={luminote}
-              isBlog={false}
-              title="LumiNote - A Note-Taking App"
-              description="A powerful, feature-rich digital note-taking application inspired by GoodNotes. Built with vanilla JavaScript, HTML, and CSS - no frameworks required."
-              ghLink="https://github.com/MK-0406/Notes.git"
-              demoLink="https://mk-0406.github.io/Notes/"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={snapaiMac}
-              isBlog={false}
-              title="SnapAI for Mac"
-              description="SnapAI is a lightweight floating panel app for macOS that monitors your screenshots, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers."
-              ghLink="https://github.com/MK-0406/SnapAI_Mac.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={snapaiWindows}
-              isBlog={false}
-              title="SnapAI for Windows"
-              description="SnapAI is a lightweight floating panel app for Windows that monitors your screenshot folder, extracts text using OCR, and sends it to the Gemini 2.5 Flash API to generate intelligent answers.."
-              ghLink="https://github.com/MK-0406/SnapAI_Windows.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={mealLogging}
-              isBlog={false}
-              title="Meal Logging and Nutrient Tracking Application (FoodWise)"
-              description="FoodWise is a modern, AI-powered meal logging and nutritional tracking application designed to help users achieve their health goals through personalized insights and community support."
-              ghLink="https://github.com/MK-0406/meal_logging.git"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={portfolio}
-              isBlog={false}
-              title="My Portfolio Website"
-              description="A React-based personal portfolio website showcasing profile information, skills, projects, resume, and contact form."
-              ghLink="https://github.com/MK-0406/Portfolio.git"
-              demoLink="https://portfolio-mkwong.vercel.app"
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={mealRecommendationAPI}
-              isBlog={false}
-              title="Meal Recommendation Model API"
-              description="Simple FastAPI service for meal recommendation inference using a pre-trained scikit-learn model."
-              ghLink="https://github.com/MK-0406/meal_recommender_model.git"
-            />
-          </Col>
+          {projects.map((project) => (
+            <Col md={4} className="project-card" key={project.title}>
+              <ProjectCard {...project} />
+            </Col>
+          ))}
         </Row>
       </Container>
     </Container>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
