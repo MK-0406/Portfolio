@@ -1,5 +1,6 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { Container, Row, Col, Modal } from "react-bootstrap";
+import { BsChevronLeft, BsChevronRight, BsX } from "react-icons/bs";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
 import globaleat from "../assets/projects/globaleat.png";
@@ -21,7 +22,12 @@ import luminote from "../assets/projects/luminote.png";
 import snapaiMac from "../assets/projects/snapai-mac.png";
 import snapaiWindows from "../assets/projects/snapai-windows.png";
 import mealLogging from "../assets/projects/meal-logging.png";
-import portfolio from "../assets/projects/portfolio.png";
+import portfolio1 from "../assets/projects/portfolio-1.png";
+import portfolio2 from "../assets/projects/portfolio-2.png";
+import portfolio3 from "../assets/projects/portfolio-3.png";
+import portfolio4 from "../assets/projects/portfolio-4.png";
+import portfolio5 from "../assets/projects/portfolio-5.png";
+import portfolio6 from "../assets/projects/portfolio-6.png";
 import mealRecommendationAPI from "../assets/projects/meal-recommendation-api.png";
 
 const projects = [
@@ -84,7 +90,7 @@ const projects = [
       "https://colab.research.google.com/drive/17ujh34a_xm8BrzaAny3eBhkUSq3HzzUo?usp=sharing",
   },
   {
-    imgPath: portfolio,
+    images: [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6],
     isBlog: false,
     title: "My Portfolio Website",
     description:
@@ -231,7 +237,67 @@ const projects = [
   },
 ];
 
+const getProjectImages = (project) => {
+  if (Array.isArray(project.images) && project.images.length > 0) {
+    return project.images;
+  }
+
+  return project.imgPath ? [project.imgPath] : [];
+};
+
 const Projects = () => {
+
+  const [showGallery, setShowGallery] = useState(false);
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(null);
+
+  const openGallery = (projectIndex, imageIndex = 0) => {
+    setActiveProjectIndex(projectIndex);
+    setActiveImageIndex(imageIndex);
+    setShowGallery(true);
+  };
+
+  const closeGallery = () => {
+    setShowGallery(false);
+  };
+
+  const activeProject = projects[activeProjectIndex];
+  const activeProjectImages = useMemo(
+    () => getProjectImages(activeProject),
+    [activeProject]
+  );
+
+  const showNextImage = useCallback(() => {
+    setActiveImageIndex((current) => (current + 1) % activeProjectImages.length);
+  }, [activeProjectImages.length]);
+
+  const showPrevImage = useCallback(() => {
+    setActiveImageIndex((current) =>
+      (current - 1 + activeProjectImages.length) % activeProjectImages.length
+    );
+  }, [activeProjectImages.length]);
+
+  useEffect(() => {
+    if (!showGallery) {
+      return undefined;
+    }
+
+    const handleKeydown = (event) => {
+      if (event.key === "ArrowRight") {
+        showNextImage();
+      }
+      if (event.key === "ArrowLeft") {
+        showPrevImage();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+    return () => window.removeEventListener("keydown", handleKeydown);
+  }, [showGallery, showNextImage, showPrevImage]);
+
+  const activeImage = activeProjectImages[activeImageIndex];
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -243,13 +309,86 @@ const Projects = () => {
           Projects are ordered by skill impact, with advanced AI/full-stack work first.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Col md={4} className="project-card" key={project.title}>
-              <ProjectCard {...project} />
+              <ProjectCard
+                {...project}
+                previewImage={getProjectImages(project)[0]}
+                onImageClick={() => openGallery(index)}
+              />
             </Col>
           ))}
         </Row>
       </Container>
+
+      <Modal
+        show={showGallery}
+        onHide={closeGallery}
+        centered
+        size="xl"
+        contentClassName="project-gallery-modal"
+      >
+        <Modal.Body className="project-gallery-body">
+          <button
+            type="button"
+            className="gallery-close-btn"
+            onClick={closeGallery}
+            aria-label="Close gallery"
+          >
+            <BsX />
+          </button>
+
+          <button
+            type="button"
+            className="gallery-nav-btn gallery-nav-left"
+            onClick={showPrevImage}
+            aria-label="Previous image"
+          >
+            <BsChevronLeft />
+          </button>
+
+          <div
+            className="gallery-image-wrapper"
+            onTouchStart={(event) => setTouchStartX(event.changedTouches[0].clientX)}
+            onTouchEnd={(event) => {
+              if (touchStartX === null) {
+                return;
+              }
+
+              const touchEndX = event.changedTouches[0].clientX;
+              const distance = touchStartX - touchEndX;
+
+              if (Math.abs(distance) > 50) {
+                if (distance > 0) {
+                  showNextImage();
+                } else {
+                  showPrevImage();
+                }
+              }
+
+              setTouchStartX(null);
+            }}
+          >
+            <img
+              src={activeImage}
+              alt={activeProject?.title || "Project preview"}
+              className="gallery-image"
+            />
+            <p className="gallery-image-title">
+              {activeProject?.title} ({activeImageIndex + 1}/{activeProjectImages.length})
+            </p>
+          </div>
+
+          <button
+            type="button"
+            className="gallery-nav-btn gallery-nav-right"
+            onClick={showNextImage}
+            aria-label="Next image"
+          >
+            <BsChevronRight />
+          </button>
+        </Modal.Body>
+      </Modal>
     </Container>
   );
 };

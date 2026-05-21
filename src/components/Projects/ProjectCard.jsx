@@ -15,17 +15,24 @@ const ProjectCard = (props) => {
         alignContent: "space-between",
       }}
     >
-      <Card.Img
-        variant="top"
-        src={props.imgPath}
-        alt="card-img"
-        style={{
-          height: "200px",
-          objectFit: "contain",
-          alignSelf: "flex-start",
-          borderRadius: "10%",
-        }}
-      />
+      <button
+        type="button"
+        className="project-image-btn"
+        onClick={props.onImageClick}
+        aria-label={`Enlarge ${props.title} image`}
+      >
+        <Card.Img
+          variant="top"
+          src={props.previewImage || props.imgPath}
+          alt={`${props.title} preview`}
+          style={{
+            height: "200px",
+            objectFit: "contain",
+            alignSelf: "flex-start",
+            borderRadius: "10%",
+          }}
+        />
+      </button>
       <Card.Body
         style={{
           display: "flex",
@@ -35,55 +42,54 @@ const ProjectCard = (props) => {
         }}
       >
         <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify",fontSize:"15px" }}>
+        <Card.Text style={{ textAlign: "justify", fontSize: "15px" }}>
           {props.description}
         </Card.Text>
         <div>
           <Button
-          variant="primary"
-          href={props.ghLink}
-          target="_blank"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            alignContent: "flex-end",
-            textAlign: "center",
-            position: "relative",
-            bottom: "0px",
-          }}
-        >
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
-
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-        {!props.isBlog && props.demoLink && (
-          <Button
             variant="primary"
-            href={props.demoLink}
+            href={props.ghLink}
             target="_blank"
             style={{
-              marginTop: "10px",
               display: "flex",
               justifyContent: "center",
-              alignContent: "flex-end",
               alignItems: "center",
+              alignContent: "flex-end",
               textAlign: "center",
-              position: "static",
+              position: "relative",
               bottom: "0px",
             }}
           >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+            <BsGithub /> &nbsp;
+            {props.isBlog ? "Blog" : "GitHub"}
           </Button>
-        )}
+          {"\n"}
+          {"\n"}
+
+          {!props.isBlog && props.demoLink && (
+            <Button
+              variant="primary"
+              href={props.demoLink}
+              target="_blank"
+              style={{
+                marginTop: "10px",
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "flex-end",
+                alignItems: "center",
+                textAlign: "center",
+                position: "static",
+                bottom: "0px",
+              }}
+            >
+              <CgWebsite /> &nbsp;
+              {"Demo"}
+            </Button>
+          )}
         </div>
       </Card.Body>
     </Card>
   );
 };
+
 export default ProjectCard;
