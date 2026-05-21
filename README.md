@@ -2,7 +2,7 @@
 
 A React-based personal portfolio website showcasing profile information, skills, projects, resume, and contact form.
 
-![portfolio](src/assets/projects/portfolio.png)
+![portfolio](src/assets/projects/portfolio-1.png)
 
 ## Features
 
