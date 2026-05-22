@@ -3,12 +3,48 @@ import { Container, Row, Col, Modal } from "react-bootstrap";
 import { BsChevronLeft, BsChevronRight, BsX } from "react-icons/bs";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
-import globaleat from "../assets/projects/globaleat.png";
+import attendance1 from "../assets/projects/attendance-1.png";
+import attendance2 from "../assets/projects/attendance-2.png";
+import attendance3 from "../assets/projects/attendance-3.png";
+import attendance4 from "../assets/projects/attendance-4.png";
+import attendance5 from "../assets/projects/attendance-5.png";
+import globaleat1 from "../assets/projects/globaleat-1.png";
+import globaleat2 from "../assets/projects/globaleat-2.png";
+import globaleat3 from "../assets/projects/globaleat-3.png";
+import globaleat4 from "../assets/projects/globaleat-4.png";
+import globaleat5 from "../assets/projects/globaleat-5.png";
+import globaleat6 from "../assets/projects/globaleat-6.png";
+import globaleat7 from "../assets/projects/globaleat-7.png";
 import cardio from "../assets/projects/cardio.png";
 import remainderTheorem from "../assets/projects/remainder-theorem.png";
 import warehouseSimulation from "../assets/projects/warehouse-simulation.png";
 import mnist from "../assets/projects/mnist.png";
-import hospitalManagement from "../assets/projects/hospital-management-java.png";
+import hospital1 from "../assets/projects/hospital-1.png";
+import hospital2 from "../assets/projects/hospital-2.png";
+import hospital3 from "../assets/projects/hospital-3.png";
+import hospital4 from "../assets/projects/hospital-4.png";
+import hospital5 from "../assets/projects/hospital-5.png";
+import hospital6 from "../assets/projects/hospital-6.png";
+import hospital7 from "../assets/projects/hospital-7.png";
+import hospital8 from "../assets/projects/hospital-8.png";
+import hospital9 from "../assets/projects/hospital-9.png";
+import hospital10 from "../assets/projects/hospital-10.png";
+import hospital11 from "../assets/projects/hospital-11.png";
+import hospital12 from "../assets/projects/hospital-12.png";
+import hospital13 from "../assets/projects/hospital-13.png";
+import hospital14 from "../assets/projects/hospital-14.png";
+import hospital15 from "../assets/projects/hospital-15.png";
+import hospital16 from "../assets/projects/hospital-16.png";
+import hospital17 from "../assets/projects/hospital-17.png";
+import hospital18 from "../assets/projects/hospital-18.png";
+import hospital19 from "../assets/projects/hospital-19.png";
+import hospital20 from "../assets/projects/hospital-20.png";
+import hospital21 from "../assets/projects/hospital-21.png";
+import hospital22 from "../assets/projects/hospital-22.png";
+import hospital23 from "../assets/projects/hospital-23.png";
+import hospital24 from "../assets/projects/hospital-24.png";
+import hospital25 from "../assets/projects/hospital-25.png";
+import hospital26 from "../assets/projects/hospital-26.png";
 import restaurantManagementDb from "../assets/projects/restaurant-management-db.png";
 import cpuMonitoring from "../assets/projects/cpu-monitoring.png";
 import simpleOperations from "../assets/projects/simple-operations.png";
@@ -16,12 +52,37 @@ import studentCourseManagement from "../assets/projects/student-course-managemen
 import studentLinkedList from "../assets/projects/student-linked-list.png";
 import studentBinaryTree from "../assets/projects/student-binary-tree.png";
 import restaurantOrdering from "../assets/projects/restaurant-ordering.png";
-import memorisingApp from "../assets/projects/memorising-app.png";
-import navigation from "../assets/projects/navigation.png";
-import luminote from "../assets/projects/luminote.png";
+import memorise1 from "../assets/projects/memorise-1.png";
+import memorise2 from "../assets/projects/memorise-2.png";
+import memorise3 from "../assets/projects/memorise-3.png";
+import memorise4 from "../assets/projects/memorise-4.png";
+import memorise5 from "../assets/projects/memorise-5.png";
+import memorise6 from "../assets/projects/memorise-6.png";
+import navigation1 from "../assets/projects/navigation-1.png";
+import navigation2 from "../assets/projects/navigation-2.png";
+import navigation3 from "../assets/projects/navigation-3.png";
+import navigation4 from "../assets/projects/navigation-4.png";
+import navigation5 from "../assets/projects/navigation-5.png";
+import navigation6 from "../assets/projects/navigation-6.png";
+import luminote1 from "../assets/projects/luminote-1.png";
+import luminote2 from "../assets/projects/luminote-2.png";
+import luminote3 from "../assets/projects/luminote-3.png";
+import luminote4 from "../assets/projects/luminote-4.png";
 import snapaiMac from "../assets/projects/snapai-mac.png";
 import snapaiWindows from "../assets/projects/snapai-windows.png";
-import mealLogging from "../assets/projects/meal-logging.png";
+import foodwise1 from "../assets/projects/foodwise-1.png";
+import foodwise2 from "../assets/projects/foodwise-2.png";
+import foodwise3 from "../assets/projects/foodwise-3.png";
+import foodwise4 from "../assets/projects/foodwise-4.png";
+import foodwise5 from "../assets/projects/foodwise-5.png";
+import foodwise6 from "../assets/projects/foodwise-6.png";
+import foodwise7 from "../assets/projects/foodwise-7.png";
+import foodwise8 from "../assets/projects/foodwise-8.png";
+import foodwise9 from "../assets/projects/foodwise-9.png";
+import foodwise10 from "../assets/projects/foodwise-10.png";
+import foodwise11 from "../assets/projects/foodwise-11.png";
+import foodwise12 from "../assets/projects/foodwise-12.png";
+import foodwise13 from "../assets/projects/foodwise-13.png";
 import portfolio1 from "../assets/projects/portfolio-1.png";
 import portfolio2 from "../assets/projects/portfolio-2.png";
 import portfolio3 from "../assets/projects/portfolio-3.png";
@@ -32,7 +93,7 @@ import mealRecommendationAPI from "../assets/projects/meal-recommendation-api.pn
 
 const projects = [
   {
-    imgPath: mealLogging,
+    images: [foodwise1, foodwise2, foodwise3, foodwise4, foodwise5, foodwise6, foodwise7, foodwise8, foodwise9, foodwise10, foodwise11, foodwise12, foodwise13],
     isBlog: false,
     title: "Meal Logging and Nutrient Tracking Application (FoodWise)",
     description:
@@ -48,6 +109,16 @@ const projects = [
       "Simple FastAPI service for meal recommendation inference using a pre-trained scikit-learn model.",
     skills: "Python, FastAPI, Machine Learning, API Development",
     ghLink: "https://github.com/MK-0406/meal_recommender_model.git",
+  },
+  {
+    images: [attendance1, attendance2, attendance3, attendance4, attendance5],
+    isBlog: false,
+    title: "University Student Attendance System using Face Recognition",
+    description:
+      "A React web application for automated classroom attendance using AWS face recognition services.",
+    skills: "React, AWS",
+    ghLink: "https://github.com/MK-0406/university-student-attendance-system-using-face-recognition.git",
+    demoLink: "https://main.d3savsd531obwl.amplifyapp.com"
   },
   {
     imgPath: snapaiMac,
@@ -100,7 +171,7 @@ const projects = [
     demoLink: "https://portfolio-mkwong.vercel.app",
   },
   {
-    imgPath: luminote,
+    images: [luminote1, luminote2, luminote3, luminote4],
     isBlog: false,
     title: "LumiNote - A Note-Taking App",
     description:
@@ -110,7 +181,7 @@ const projects = [
     demoLink: "https://mk-0406.github.io/Notes/",
   },
   {
-    imgPath: globaleat,
+    images: [globaleat1, globaleat2, globaleat3, globaleat4, globaleat5, globaleat6, globaleat7],
     isBlog: false,
     title: "Food Website (GlobalEat)",
     description:
@@ -120,7 +191,7 @@ const projects = [
     demoLink: "https://globaleat.netlify.app/",
   },
   {
-    imgPath: memorisingApp,
+    images: [memorise1, memorise2, memorise3, memorise4, memorise5, memorise6],
     isBlog: false,
     title: "Memorising App",
     description: "A website which helps me to memorise during my uni life.",
@@ -129,7 +200,7 @@ const projects = [
     demoLink: "https://mk-0406.github.io/Memorising-App/",
   },
   {
-    imgPath: navigation,
+    images: [navigation1, navigation2, navigation3, navigation4, navigation5, navigation6],
     isBlog: false,
     title: "Navigation System using Coloured QR Code",
     description:
@@ -166,7 +237,7 @@ const projects = [
     ghLink: "https://github.com/MK-0406/Restaurant_Management_System.git",
   },
   {
-    imgPath: hospitalManagement,
+    images: [hospital1, hospital2, hospital3, hospital4, hospital5, hospital6, hospital7, hospital8, hospital9, hospital10, hospital11, hospital12, hospital13, hospital14, hospital15, hospital16, hospital17, hospital18, hospital19, hospital20, hospital21, hospital22, hospital23, hospital24, hospital25, hospital26],
     isBlog: false,
     title: "Hospital Management System",
     description: "Simple Java demo of hospital roles and entities.",
